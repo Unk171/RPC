@@ -54,3 +54,14 @@ td {
 .buttons {
     margin: 2%;
 }
+
+#result {
+    font-size: 300%;
+    color: red;
+}
+
+#reset {
+    height: 60px;
+    width: 100px;
+    font-size: 150%;
+}
