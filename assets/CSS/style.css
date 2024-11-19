@@ -56,9 +56,10 @@ td {
     margin: 2%;
 }
 
-#result {
+#result, #compChoise {
+    text-shadow: 2px 2px 4px;
     font-size: 300%;
-    color: red;
+    color: rgb(145, 0, 0);
 }
 
 #reset {
