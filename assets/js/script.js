@@ -12,26 +12,21 @@ let loseNum = 0;
 let drewNum = 0;
 let result = "";
 let compChoiseMessage = "";
+let choises = ["Rock", "Paper", "Scissors"];
 
 function game() {
     const compChoise = Math.floor(Math.random() * 3);
-if (compChoise === 0) {
-    compChoiseMessage = "Rock"
-} else if (compChoise === 1) {
-    compChoiseMessage = "Paper"
-} else {compChoiseMessage = "Scissors"}
+    compChoiseMessage = choises[compChoise]
+    compResult.textContent = `Computer choose ${compChoiseMessage}`
     if (result === "rock" && compChoise === 2 || result === "paper" && compChoise === 0 || result === "scissors" && compChoise === 1) {
-        compResult.textContent = `Computer choose ${compChoiseMessage}`
         winner.textContent = "You win!";
         winNum++;
         win.textContent = winNum;
     } else if (result === "rock" && compChoise === 1 || result === "paper" && compChoise === 2 || result === "scissors" && compChoise === 0) {
-        compResult.textContent = `Computer choose ${compChoiseMessage}`
         winner.textContent = "You lost!";
         loseNum++;
         lose.textContent = loseNum;
     } else {
-        compResult.textContent = `Computer choose ${compChoiseMessage}`
         winner.textContent = "Draw!";
         drewNum++;
         draw.textContent = drewNum
@@ -60,5 +55,6 @@ reset.addEventListener("click", () => {
     win.textContent = winNum;
     lose.textContent = loseNum;
     draw.textContent = drewNum;
-    winner.textContent = ""
+    winner.textContent = "";
+    compResult.textContent = ""
 })
